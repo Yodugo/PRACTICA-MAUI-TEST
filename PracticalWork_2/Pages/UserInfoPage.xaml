@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticalWork_2.Pages.UserInfoPage">
+
+    
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Button Text="Log Out" Clicked="OnLogoutClicked"
+                    HorizontalOptions="End"
+                    FontAttributes="Bold" />
+        <Button Text="Exit"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                Clicked="OnExitClicked"
+                BackgroundColor="Transparent"
+                FontAttributes="Bold"/>
+
+        <Entry x:Name="UsernameEntry" Placeholder="Username" />
+        <Button Text="Show username info"
+                Clicked="OnInfoClicked" />
+
+        <Label x:Name="NameLabel" FontSize="18"/>
+        <Label x:Name="UsernameLabel" FontSize="18"/>
+        <Label x:Name="PasswordLabel" FontSize="18"/>
+        <Button Text="Back" Clicked="OnBackClicked" />
+    </VerticalStackLayout>
+</ContentPage>

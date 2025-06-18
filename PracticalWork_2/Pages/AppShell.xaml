@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PracticalWork_2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:PracticalWork_2.Pages"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate pages:LoginPage}" />
+    <ShellContent Route="RegisterPage" ContentTemplate="{DataTemplate pages:RegisterPage}" />
+    <ShellContent Route="RecoverPasswordPage" ContentTemplate="{DataTemplate pages:RecoverPasswordPage}" />
+    <ShellContent Route="MainPage" ContentTemplate="{DataTemplate pages:MainPage}" />
+    <ShellContent Route="UserInfoPage" ContentTemplate="{DataTemplate pages:UserInfoPage}" />
+
+</Shell>
