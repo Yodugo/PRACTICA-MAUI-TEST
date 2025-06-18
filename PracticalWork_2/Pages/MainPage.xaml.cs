@@ -102,9 +102,9 @@ namespace PracticalWork_2.Pages
             await Shell.Current.GoToAsync("//LoginPage");
         }
 
-        private void OnExitClicked(object sender, EventArgs e)
+        private async void OnExitClicked(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            await DisplayAlert("Exit", "Please close the app manually", "OK");
         }
         private async void OnOperationsClicked(object sender, EventArgs e)
         {
