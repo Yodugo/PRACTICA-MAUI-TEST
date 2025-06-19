@@ -35,7 +35,7 @@ namespace PracticalWork_2.Pages
             string name = null;
             bool isAuthenticated = false;
 
-            // Leer archivo con using y salir del bucle si se encuentra
+
             using (var reader = new StreamReader(userFilePath))
             {
                 while (!reader.EndOfStream)
@@ -50,9 +50,10 @@ namespace PracticalWork_2.Pages
                         break;
                     }
                 }
+                reader.Close();
             }
 
-            // Ejecutar navegación y alertas fuera del bucle
+
             if (isAuthenticated)
             {
                 await DisplayAlert("Success", $"Welcome, {name}!", "OK");

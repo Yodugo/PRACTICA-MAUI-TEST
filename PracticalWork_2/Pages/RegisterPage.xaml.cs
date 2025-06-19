@@ -71,6 +71,7 @@ namespace PracticalWork_2.Pages
                             break;
                         }
                     }
+                    reader.Close();
                 }
             }
 

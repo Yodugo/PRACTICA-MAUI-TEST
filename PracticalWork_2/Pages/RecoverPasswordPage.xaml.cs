@@ -46,6 +46,7 @@ namespace PracticalWork_2.Pages
                         break;
                     }
                 }
+                reader.Close();
             }
 
             if (foundUsername != null && foundPassword != null)
