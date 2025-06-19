@@ -20,7 +20,11 @@
 
         <Label Text="OOP Conversor" FontAttributes="Bold" FontSize="28" HorizontalOptions="Center" />
 
-        <Entry x:Name="InputEntry" FontSize="10" WidthRequest="500" HorizontalOptions="Center"/>
+        <Entry x:Name="InputEntry" FontSize="10" WidthRequest="500" HorizontalOptions="Center" Placeholder="Enter value to convert" />
+
+        <!-- NUEVO Entry para número de bits -->
+        <Entry x:Name="BitsEntry" FontSize="10" WidthRequest="500" HorizontalOptions="Center"
+               Placeholder="Number of bits (optional)" Keyboard="Numeric" />
 
         <Grid ColumnSpacing="10" RowSpacing="10" Margin="0,10,0,0" HorizontalOptions="Center">
             <Grid.RowDefinitions>

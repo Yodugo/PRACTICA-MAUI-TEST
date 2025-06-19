@@ -31,9 +31,14 @@ namespace PracticalWork_2.Pages
                 return;
             }
 
-            if (password.Length < 6)
+            if (!IsValidPassword(password))
             {
-                await DisplayAlert("Error", "Password must be at least 6 characters.", "OK");
+                await DisplayAlert("Error", "Password must be at least 8 characters long and include:\n- an uppercase letter\n- a lowercase letter\n- a number\n- a special symbol.", "OK");
+                return;
+            }
+            if (name == username)
+            {
+                await DisplayAlert("Error", "Name and username must be different.", "OK");
                 return;
             }
 
@@ -91,6 +96,23 @@ namespace PracticalWork_2.Pages
         private async void OnExitClicked(object sender, EventArgs e)
         {
             await DisplayAlert("Exit", "Please close the app manually", "OK");
+        }
+        private bool IsValidPassword(string password)
+        {
+            if (password.Length < 8)
+                return false;
+
+            bool hasUpper = false, hasLower = false, hasDigit = false, hasSymbol = false;
+
+            foreach (char c in password)
+            {
+                if (char.IsUpper(c)) hasUpper = true;
+                else if (char.IsLower(c)) hasLower = true;
+                else if (char.IsDigit(c)) hasDigit = true;
+                else if (!char.IsLetterOrDigit(c)) hasSymbol = true;
+            }
+
+            return hasUpper && hasLower && hasDigit && hasSymbol;
         }
     }
 }
